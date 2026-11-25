@@ -1,0 +1,7 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# Never serve secrets, raw SQL or docs over the web
+<FilesMatch "^(\.env.*|\.git.*|database\.sql|.*\.md)$">
+    Require all denied
+</FilesMatch>
